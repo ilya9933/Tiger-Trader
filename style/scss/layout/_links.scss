@@ -1,0 +1,129 @@
+.links {
+  padding-bottom: 80px;
+
+  &__label {
+    padding-bottom: 60px;
+  }
+
+  &__shell {
+
+  }
+}
+
+.shell {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__column {
+    
+    &_full {
+
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    justify-content: flex-start;
+
+    & > .shell__column {
+      flex: auto;
+    }
+  }
+
+  @media (max-width: 425px) {
+    justify-content: space-between;
+
+    & > .shell__column {
+      flex: 0;
+    }
+  }
+
+}
+
+.column {
+
+  &__title {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    color: var(--textBG);
+    white-space: nowrap;
+
+    @media (max-width: 1000px) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__ref {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 145%;
+    color: var(--textWG);
+
+    &_double {
+      display: flex;
+      flex-direction: row;
+      gap: 80px;
+
+      @media (max-width: 1000px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    padding-bottom: 40px;
+
+    &:last-child {
+      padding-bottom: 0px;
+    }
+  }
+}
+
+.ref {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin: -10px;
+  white-space: nowrap;
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    background:var(--icon-background-links);
+    border-radius: 10px;
+    color: var(--textBW);
+  }
+
+  &__text {
+    transition: all 0.3s ease;
+    margin: auto 0 auto 10px;
+    color: var(--textBW);
+  }
+
+  &:hover {
+    color: var(--icon-color-hover);
+    .icon {
+      color: var(--icon-color-hover);
+      background: var(--icon-background-hover);
+      box-shadow: var(--hover-box-shadow);
+    }
+
+    .ref__text {
+      color: var(--icon-color-hover);
+    }
+  }
+}

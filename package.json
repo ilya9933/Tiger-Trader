@@ -1,0 +1,15 @@
+{
+  "name": "tiger-trader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dropdown.js",
+  "scripts": {
+    "css": "node-sass style/scss -o style/css",
+    "css:watch": "npm run css && node-sass style/scss -wo style/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

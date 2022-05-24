@@ -1,0 +1,9 @@
+.container {
+  margin-top: 80px;
+  padding: 20px 80px 30px;
+  overflow: hidden;
+
+  @media (max-width: 1000px) {
+    padding: 20px 20px 40px;
+  }
+}

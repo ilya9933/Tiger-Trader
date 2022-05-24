@@ -1,0 +1,53 @@
+.language {
+  position: relative;
+  user-select: none;
+  transition: all 0.3s ease;
+
+  &__input {
+    height: 100%;
+    width: 100%;;
+    cursor: pointer;
+    border-radius: 10px;
+    background: var(--inputBG);
+    color: var(--textBW);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--icon-background-hover);
+      color: var(--icon-color-hover);
+      box-shadow: var(--hover-box-shadow);
+    }
+  }
+
+  &__select {
+    visibility: hidden;
+    opacity: 0;
+
+    &-none {
+      position: absolute;
+      visibility: visible;
+      opacity: 1;
+    }
+  } 
+}
+
+.select {
+  left: 0;
+  border-radius: 10px;
+  background: var(--background-dropdowne);
+  transition: all 0.3s ease;
+  overflow: hidden;
+
+  &__option {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    color: var(--textBW);
+
+    &:hover {
+      background: var(--icon-background-hover);
+      color: var(--icon-color-hover);
+      box-shadow: var(--hover-box-shadow);
+    }
+  }
+}
