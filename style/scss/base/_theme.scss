@@ -27,6 +27,7 @@ body {
   --logo-desk: #{$or-1};
   --logo-mb: #{$bl-1};
   --gradient: none;
+  --windows-icon: #{$blue-39};
   background: var(--background);
   color: var(--textBW);
 }
@@ -55,4 +56,5 @@ body.dark-theme {
   --logo-desk: #{$wh-1};
   --logo-mb: #{$wh-1};
   --gradient: block;
+  --windows-icon: #{$wh-1};
 }

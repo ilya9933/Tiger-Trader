@@ -103,6 +103,7 @@ body {
   --logo-desk: #FF721C;
   --logo-mb: #080610;
   --gradient: none;
+  --windows-icon: #379FFF;
   background: var(--background);
   color: var(--textBW); }
 
@@ -129,7 +130,8 @@ body.dark-theme {
   --text-footer-end: #FFFFFF;
   --logo-desk: #FFFFFF;
   --logo-mb: #FFFFFF;
-  --gradient: block; }
+  --gradient: block;
+  --windows-icon: #FFFFFF; }
 
 #hamburger__toggle {
   position: absolute;
@@ -461,8 +463,16 @@ body.dark-theme {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  cursor: pointer; }
   .icon svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+  .icon img {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -548,16 +558,18 @@ body.dark-theme {
         color: #FFFFFF; } }
   .description__date {
     display: none;
-    padding-top: 10px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 145%; }
+    padding-top: 10px; }
     @media (max-width: 1000px) {
       .description__date {
         display: block; } }
   @media (max-width: 1000px) {
     .description {
       color: #FFFFFF; } }
+
+.date {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 145%; }
 
 .block {
   display: grid;
@@ -749,6 +761,94 @@ body.dark-theme {
   font-size: 16px;
   line-height: 145%; }
 
+.author {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  padding-bottom: 50px; }
+  .author__avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    overflow: hidden; }
+    .author__avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .author__name {
+    padding-top: 15px; }
+  .author__date {
+    padding-top: 5px;
+    color: var(--text-footer); }
+
+.share {
+  padding-bottom: 50px; }
+  .share__icons {
+    display: flex;
+    gap: 10px; }
+  .share__icon {
+    background: var(--icon-background-links);
+    border-radius: 10px;
+    color: var(--textBW);
+    width: 50px;
+    height: 50px; }
+    .share__icon:hover {
+      box-shadow: var(--hover-box-shadow);
+      background-color: var(--icon-background-hover); }
+    .share__icon:active {
+      background-color: var(--icon-background-hover);
+      color: var(--icon-color-hover); }
+
+.product {
+  padding-bottom: 50px; }
+  .product__options {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 50px;
+    gap: 20px; }
+  .product__info {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15px; }
+  .product__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .product__os {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: var(--text-footer);
+    padding-bottom: 5px; }
+  .product__name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 145%; }
+  .product__icon {
+    background: var(--icon-background-links);
+    border-radius: 10px;
+    color: var(--textBW);
+    width: 50px;
+    height: 50px; }
+    .product__icon_windows {
+      background: var(--icon-background-links);
+      border-radius: 10px;
+      color: var(--windows-icon);
+      width: 50px;
+      height: 50px; }
+      .product__icon_windows:hover {
+        box-shadow: var(--hover-box-shadow);
+        background-color: var(--icon-background-hover); }
+      .product__icon_windows:active {
+        background-color: var(--icon-background-hover);
+        color: var(--icon-color-hover); }
+    .product__icon:hover {
+      box-shadow: var(--hover-box-shadow);
+      background-color: var(--icon-background-hover); }
+    .product__icon:active {
+      background-color: var(--icon-background-hover);
+      color: var(--icon-color-hover); }
+
 .header {
   position: fixed;
   display: flex;
@@ -827,7 +927,7 @@ body.dark-theme {
       display: none; } }
 
 .news {
-  padding-bottom: 20px; }
+  padding-bottom: 120px; }
   .news__main {
     position: relative;
     width: 100%;
@@ -852,7 +952,6 @@ body.dark-theme {
       @media (max-width: 1000px) {
         .news__block_double {
           grid-template-columns: 1fr;
-          grid-template-rows: 2fr 1fr;
           gap: 60px; } }
     @media (max-width: 1000px) {
       .news__block {
@@ -1051,6 +1150,14 @@ body.dark-theme {
       .column__ref_double {
         flex-direction: column;
         gap: 20px; } }
+  .column__ref_i {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 145%;
+    color: var(--textWG); }
 
 @media (max-width: 1000px) {
   .column {
@@ -1116,3 +1223,43 @@ body.dark-theme {
 .col__info_end {
   text-align: end;
   color: var(--text-footer-end); }
+
+.article {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 100px 60px; }
+  .article__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    padding-bottom: 20px;
+    white-space: nowrap; }
+  .article__block {
+    grid-column: span 2; }
+    .article__block_editor-picks {
+      padding-bottom: 50px; }
+      .article__block_editor-picks .block__title {
+        padding-bottom: 20px; }
+      .article__block_editor-picks .block__body {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        gap: 30px; }
+        .article__block_editor-picks .block__body .new {
+          grid-template-columns: auto 65px;
+          grid-template-rows: 60px;
+          gap: 15px; }
+          .article__block_editor-picks .block__body .new .new__description {
+            justify-content: center; }
+            .article__block_editor-picks .block__body .new .new__description .description__date {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 140%;
+              color: var(--text-footer);
+              padding-top: 0;
+              padding-bottom: 5px; }
+            .article__block_editor-picks .block__body .new .new__description .description__title {
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 145%;
+              height: calc(20px * 2); }

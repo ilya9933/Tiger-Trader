@@ -1,0 +1,30 @@
+.share {
+  padding-bottom: 50px;
+
+  &__title {
+    
+  }
+
+  &__icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__icon {
+    background:var(--icon-background-links);
+    border-radius: 10px;
+    color: var(--textBW);
+    width: 50px;
+    height: 50px;
+
+    &:hover {
+      box-shadow: var(--hover-box-shadow);
+      background-color: var(--icon-background-hover);
+    }
+
+    &:active {
+      background-color: var(--icon-background-hover);
+      color: var(--icon-color-hover);
+    }
+  }
+}
